@@ -30,7 +30,7 @@ const ticket = [
     },
 ];
 
-let seleccion = prompt("¿Desea comprar tickets para el evento de ColdPlay?");
+let seleccion = prompt("¿Desea comprar tickets para el evento de ColdPlay?").toLowerCase();
 
 while (seleccion != "si" && seleccion != "no") {
     alert("por favor ingresa si o no")
@@ -47,7 +47,7 @@ if (seleccion == "si") {
 }
 
 while (seleccion != "no") {
-    let sector = prompt("Indique porfavor en que sector desea ubicarse para el evento");
+    let sector = prompt("Indique porfavor en que sector desea ubicarse para el evento").toUpperCase();
     let precio = 0;
 
     if (sector == "CAMPO DELANTERO" || sector == "PLATEA PREFERIDA" || sector == "PLATEA" ||
@@ -85,6 +85,11 @@ while (seleccion != "no") {
             default: break;
         }
         let unidades = parseInt(prompt("¿Cuantos tickects desea comprar?"))
+
+        while (unidades < 0){
+            alert("Porvafor indique la cantidad de unidades que desea comprar")
+            unidades = parseInt(prompt("¿Cuantos tickects desea comprar?"))
+        }
 
         carrito.push({sector,unidades, precio})
     } else {
