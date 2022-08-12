@@ -36,7 +36,7 @@ const ticket = [ /*Creo distintos objetos y los guardo en un array "ticket"*/
 
 /*Le pido una entrada al usuario*/
 
-let seleccion = prompt("¿Desea comprar tickets para el evento de ColdPlay?").toLowerCase();
+let seleccion = prompt("¿Desea comprar tickets para el evento de ColdPlay? (responda con si o no porfavor)").toLowerCase();
 
 while (seleccion != "si" && seleccion != "no") {
     alert("por favor ingresa si o no")
@@ -118,7 +118,7 @@ while (seleccion != "no") {
         alert("El sector que usted indica no se encuentra existente o habilitado")
     }
 
-    seleccion = prompt("¿Desea modificar algo de su eleccion?") /*Entrada de verificacion si desea editar algo de sus elecciones*/
+    seleccion = prompt("¿Desea modificar algo de su eleccion? (responda con si o no porfavor)") /*Entrada de verificacion si desea editar algo de sus elecciones*/
     while (seleccion === "no") {
         alert("Genial, a continuancion se le estara mostrando su monto total a pagar:")
 
