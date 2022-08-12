@@ -1,5 +1,9 @@
-let carrito = []
-const ticket = [
+alert("Comprando 2 entradas obtendras el 10% de descuento en su compra.\nComprando 3 entradas en adelante sera del 20% de descuento en su compra.")
+
+let descuento = 0;
+let precioTotal = 0;
+let carrito = [] /*Creo un array vacio para luego pushearle objetos*/
+const ticket = [ /*Creo distintos objetos y los guardo en un array "ticket"*/
     {
         sector: "CAMPO DELANTERO",
         precio: 19500
@@ -30,6 +34,8 @@ const ticket = [
     },
 ];
 
+/*Le pido una entrada al usuario*/
+
 let seleccion = prompt("¿Desea comprar tickets para el evento de ColdPlay?").toLowerCase();
 
 while (seleccion != "si" && seleccion != "no") {
@@ -46,6 +52,8 @@ if (seleccion == "si") {
     alert("Gracias por venir. Hasta pronto !!")
 }
 
+/*Pido otra entrada al usuario mostrandole un abanico de opciones*/
+
 while (seleccion != "no") {
     let sector = prompt("Indique porfavor en que sector desea ubicarse para el evento").toUpperCase();
     let precio = 0;
@@ -53,6 +61,8 @@ while (seleccion != "no") {
     if (sector == "CAMPO DELANTERO" || sector == "PLATEA PREFERIDA" || sector == "PLATEA" ||
         sector == "PLATEA ALTA" || sector == "PLATEA MEDIA SIVORI" || sector == "CAMPO" || sector == "PLATEA ALTA SIVORI") {
         switch (sector) {
+
+            /*Creo un switch con las opciones ya indicadas para luego usar el valor de "precio"*/
 
             case "CAMPO DELANTERO":
                 precio = 19500;
@@ -84,23 +94,47 @@ while (seleccion != "no") {
 
             default: break;
         }
-        let unidades = parseInt(prompt("¿Cuantos tickects desea comprar?"))
+
+        /*Pido otra entrada, pidiendo la cantidad de unidades que desea comprar el usuario*/
+
+        let unidades = parseInt(prompt("¿Cuantos tickets desea comprar?"))
 
         while (unidades < 0) {
             alert("Porvafor indique la cantidad de unidades que desea comprar")
             unidades = parseInt(prompt("¿Cuantos tickects desea comprar?"))
         }
+        /*Indico de cuanto sera el descuento*/
+        if (unidades == 2) {
+            descuento = 10;
 
-        carrito.push({ sector, unidades, precio })
+        }
+        else if (unidades >= 3) {
+            descuento = 20;
+
+        }
+        carrito.push({ sector, unidades, precio, descuento }) /*Pusheo al carrito los siguientes parametros*/
+
     } else {
         alert("El sector que usted indica no se encuentra existente o habilitado")
     }
 
-    seleccion = prompt("¿Desea modificar algo de su eleccion?")
+    seleccion = prompt("¿Desea modificar algo de su eleccion?") /*Entrada de verificacion si desea editar algo de sus elecciones*/
     while (seleccion === "no") {
         alert("Genial, a continuancion se le estara mostrando su monto total a pagar:")
-        carrito.forEach((carritoFinal) => { console.log(`Sector: ${carritoFinal.sector} - Unidades: ${carritoFinal.unidades}`) })
-       break;
+
+        /*Muestro por consola la salida indicando que sector, cuantas unidades y monto final a pagar*/
+        function aplicarDescuento(a) {/* Creo funcion para aplicar descuentos */
+            return (descuento * a) / 100;
+        }
+
+
+        carrito.forEach((carritoFinal) => {
+
+            precioTotal = `${(carritoFinal.precio * carritoFinal.unidades)}`
+
+            console.log(`Sector: ${carritoFinal.sector}  \nUnidades: ${carritoFinal.unidades} \nDescuento: ${carritoFinal.descuento}%  \nTotal a pagar: ${precioTotal - aplicarDescuento(precioTotal)}`)
+        })
+        break;
     }
 }
 
