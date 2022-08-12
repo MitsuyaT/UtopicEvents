@@ -86,23 +86,25 @@ while (seleccion != "no") {
         }
         let unidades = parseInt(prompt("¿Cuantos tickects desea comprar?"))
 
-        while (unidades < 0){
+        while (unidades < 0) {
             alert("Porvafor indique la cantidad de unidades que desea comprar")
             unidades = parseInt(prompt("¿Cuantos tickects desea comprar?"))
         }
 
-        carrito.push({sector,unidades, precio})
+        carrito.push({ sector, unidades, precio })
     } else {
         alert("El sector que usted indica no se encuentra existente o habilitado")
     }
 
     seleccion = prompt("¿Desea modificar algo de su eleccion?")
-    while(seleccion === "no"){
+    while (seleccion === "no") {
         alert("Genial, a continuancion se le estara mostrando su monto total a pagar:")
-        carrito.forEach((carritoFinal   ) => {console.log(`Sector: ${carritoFinal.sector} - Unidades: ${carritoFinal.unidades} -
-        Total a pagar: ${carritoFinal.unidades * carritoFinal.precio}`)})
-        break;;
-    } 
+        carrito.forEach((carritoFinal) => { console.log(`Sector: ${carritoFinal.sector} - Unidades: ${carritoFinal.unidades}`) })
+       break;
+    }
 }
+
+
+
 
 
