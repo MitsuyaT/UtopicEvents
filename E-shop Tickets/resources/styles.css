@@ -1,0 +1,9 @@
+#container {
+    background-color: khaki;
+    height: 100vh;
+    margin: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
