@@ -44,44 +44,75 @@ section {
 }
 
 section {
+    color: #dd0483;
     flex: 70%;
-    background-color: darkslategrey;
+    background-color: #04030f;
     padding: 20px;
+}
+
+section h2 {
+    color: white;
+    border-bottom: 2px solid #009688;
+}
+
+#formulario-container {
+    max-width: 100%;
+    height: 250px;
+    background-color: #161a1d;
+    border-radius: 10px;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+#sector-container {
+    display: flex;
+}
+
+#input-sectores {
+    padding-left: 40px;
+}
+
+#ticket-container {
+    display: flex;
+}
+
+#input-tickets {
+    padding-left: 40px;
 }
 
 aside {
     flex: 30%;
-    background-color: blue;
+    background-color: black;
     padding: 20px;
 }
 
 #purchase img {
+    border-radius: 10px;
     width: 100%;
 }
 
 #table-container {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 table {
+    background-color: black;
     letter-spacing: 1px;
     text-align: left;
     width: 100%;
     border-collapse: collapse;
 }
 
-th, td {
-    padding: 2px;
-}
-
 thead {
-    background-color: #009688;
     color: white;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #009688;
 }
 
-tr:nth-child(even){
-    background-color: rgba(151, 151, 151, 0.637);
+tr td {
+    color: white;
 }
 
 thead tr th {

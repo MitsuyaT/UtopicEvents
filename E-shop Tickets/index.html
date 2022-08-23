@@ -24,25 +24,31 @@
 
     <div class="row">
         <section>
-            <div id="container">
-                <div id="Ticket">
-                    <h2>Coldplay 10th River Plate</h2>
-                    <form id="formulario">
+            <div id="formulario-container">
+                <h2>Coldplay 10th River Plate</h2>
+                <form id="formulario">
+                    <div id="sector-container">
                         <h4>Indique que sector desea ubicarse</h4>
-                        <select name="Sectores" id="sectores">
-                            <option value="CAMPO DELANTERO">CAMPO DELANTERO</option>
-                            <option value="PLATEA PREFERIDA">PLATEA PREFERIDA</option>
-                            <option value="PLATEA">PLATEA</option>
-                            <option value="PLATEA ALTAS">PLATEA ALTAS</option>
-                            <option value="PLATEA MEDIA SIVORI">PLATEA MEDIA SIVORI</option>
-                            <option value="CAMPO">CAMPO</option>
-                            <option value="PLATEA ALTA SIVORI">PLATEA ALTA SIVORI</option>
-                        </select>
+                        <div id="input-sectores">
+                            <select name="Sectores" id="sectores">
+                                <option value="CAMPO DELANTERO">CAMPO DELANTERO</option>
+                                <option value="PLATEA PREFERIDA">PLATEA PREFERIDA</option>
+                                <option value="PLATEA">PLATEA</option>
+                                <option value="PLATEA ALTAS">PLATEA ALTAS</option>
+                                <option value="PLATEA MEDIA SIVORI">PLATEA MEDIA SIVORI</option>
+                                <option value="CAMPO">CAMPO</option>
+                                <option value="PLATEA ALTA SIVORI">PLATEA ALTA SIVORI</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="ticket-container">
                         <h4>Indique cantidad de tickets</h4>
-                        <input id="cantidadTickets" type="number" max="10" min="1" value="2">
-                        <button type="submit">Comprar</button>
-                    </form>
-                </div>
+                        <div id="input-tickets">
+                            <input id="cantidadTickets" type="number" max="10" min="1" value="2">
+                            <button type="submit">Comprar</button>
+                       </div>
+                </form>
+            </div>
         </section>
         <aside>
             <div id="purchase">
