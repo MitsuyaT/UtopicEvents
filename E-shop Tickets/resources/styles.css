@@ -1,16 +1,89 @@
-#container {
-    background-color: #009688;
-    height: 100vh;
-    margin: 2%;
-    padding-left: 100px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
+nav {
+    background-color: #009688;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.logo {
+    width: 122px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;      
+}
+
+section {
+    background-color: black;
+}
+
+.row {
+    height: 530px;
+    display: flex;
+}
+
+section {
+    flex: 70%;
+    background-color: darkslategrey;
+    padding: 20px;
+}
+
+aside {
+    flex: 30%;
+    background-color: blue;
+    padding: 20px;
+}
 
 #purchase img {
+    width: 100%;
+}
+
+#table-container {
+    background-color: white;
+}
+
+table {
+    letter-spacing: 1px;
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 2px;
+}
+
+thead {
+    background-color: #009688;
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+tr:nth-child(even){
+    background-color: rgba(151, 151, 151, 0.637);
+}
+
+thead tr th {
     width: 50%;
 }

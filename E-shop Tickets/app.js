@@ -7,7 +7,7 @@ function obtenerDatos(e) {
     carrito.push(`${sector} ${cantidadTickets}`)
     console.log(carrito)
 
-    document.querySelector("#tablabody").innerHTML+=`
+    document.querySelector("tbody").innerHTML+=`
         <tr>
             <td>${sector}</td>
             <td>${cantidadTickets}</td>
