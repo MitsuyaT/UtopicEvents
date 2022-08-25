@@ -129,10 +129,7 @@ select {
     padding-left: 40px;
 }
 
-.container-button {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .container-button button {
     width: 200px;
