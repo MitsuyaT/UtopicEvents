@@ -1,6 +1,8 @@
-let carrito = [];
-
+let carrito = []; //creamos un array para luego pushear en el carrito
+let myForm = document.querySelector("#formulario");
 let recuperarCarrito = document.querySelector("#recuperarCarrito")
+
+myForm.addEventListener("submit", obtenerDatos);
 recuperarCarrito.addEventListener("click", obtenerLocalStorage)
 
 function obtenerLocalStorage(){
@@ -12,23 +14,24 @@ function obtenerLocalStorage(){
 if(localStorage.getItem("carrito")!=null){
     carrito=JSON.parse(localStorage.getItem("carrito"));
 }
+
 function obtenerDatos(e) {
     e.preventDefault()
-    let sector = document.querySelector("#sectores").value;
-    let cantidadTickets = document.querySelector("#cantidadTickets").value;
+
+    let sector = document.getElementById("sectores").value;
+    let cantidadTickets = document.getElementById("cantidadTickets").value;
 
     carrito.push(`${sector} ${cantidadTickets}`)
-    console.log(carrito)
 
-    document.querySelector("tbody").innerHTML+=`
-        <tr>
-            <td>${sector}</td>
-            <td>${cantidadTickets}</td>
-        </tr>
-    `;
+    document.querySelector("tbody").innerHTML += `
+    <tr>
+        <td>${sector}</td>
+        <td>${cantidadTickets}</td>
+    </tr>`;
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
+
 }
 
-let myForm = document.querySelector("#formulario"); 
-myForm.addEventListener("submit", obtenerDatos);
+
+
