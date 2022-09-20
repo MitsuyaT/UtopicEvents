@@ -1,11 +1,11 @@
-Swal.fire({
-    title: 'Surprise!',
-    text: 'Comprando 2 entradas obtendras el 10% de descuento en su compra.Comprando 3 entradas en adelante sera del 20% de descuento en su compra.',
-    imageUrl: '../E-shop Tickets/resources/img/coldplaysweetaler.png',
-    imageWidth: 400,
-    imageHeight: 220,
-    imageAlt: 'Custom image',
-  })
+// Swal.fire({
+    // title: 'Surprise!',
+    // text: 'Comprando 2 entradas obtendras el 10% de descuento en su compra.Comprando 3 entradas en adelante sera del 20% de descuento en su compra.',
+    // imageUrl: '../E-shop Tickets/resources/img/coldplaysweetaler.png',
+    // imageWidth: 400,
+    // imageHeight: 220,
+    // imageAlt: 'Custom image',
+//   })
 
 let carrito = []; //creamos un array para luego pushear en el carrito
 let myForm = document.querySelector("#formulario");
