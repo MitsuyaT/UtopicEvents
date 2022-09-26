@@ -57,7 +57,7 @@ section h2 {
 
 #formulario-container {
     max-width: 100%;
-    height: 250px;
+    height: 230px;
     background-color: #161a1d;
     border-radius: 10px;
 }
@@ -167,7 +167,7 @@ button:hover span {
     width: 100%;
 }
 
-
+/* 
 aside {
     flex: 30%;
     background-color: black;
@@ -202,4 +202,8 @@ tr td {
 
 thead tr th {
     width: 50%;
+} */
+
+#modal {
+    background-color: #2b2e2e;
 }
